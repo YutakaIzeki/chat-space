@@ -31,7 +31,7 @@ Things you may want to cover:
 |name|string|null: false, add_index :users, :name|
 |email|string|null: false|
 
-###Association
+### Association
 - has_namy :members
 - has_many :messages
 
@@ -47,7 +47,7 @@ Things you may want to cover:
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 
-###Association
+### Association
 - belongs_to :user
 - belongs_to :group
 
@@ -60,7 +60,7 @@ Things you may want to cover:
 |------|----|------|
 |name|string|null: false|
 
-###Association
+### Association
 - has_namy :members
 - has_many :messages
 
@@ -74,7 +74,7 @@ Things you may want to cover:
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 
-###Association
+### Association
 - belongs_to :menmers
 - belongs_to :messages
 
