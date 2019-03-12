@@ -28,8 +28,8 @@ Things you may want to cover:
 
 |Column|Type|Option|
 |------|----|------|
-|name|string|null: false, add_index :users, :name|
-|email|string|null: false|
+|name|string|null: false, index: true, unique: true|
+|email|string|null: false, unique: true|
 
 ### Association
 - has_many :groups, through: :members
@@ -43,8 +43,8 @@ Things you may want to cover:
 
 |Column|Type|Option|
 |------|----|------|
-|body|text|null: true|
-|image|string|null: true|
+|content|text|-|
+|image|string|-|
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 
