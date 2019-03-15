@@ -1,6 +1,10 @@
 
-
 .wrapper
+  / .create-group-message
+  /   グループを作成しました
+
+
+
   .chat-side
     .side-header
       .side-header__box
@@ -15,3 +19,29 @@
     .groups
       = render partial: "group"
       = render partial: "group"
+
+  .main
+    .main-header
+      .main-header__left-box
+        %h2.main-header__left-box__current-group お菓子大好き
+        %ul.main-header__left-box__member-list Member : yutaka
+      %a
+        .main-header__edit-btn Edit
+
+    .messages
+      = render partial: "message"
+      = render partial: "message"
+
+    .form
+      .new-message
+        .input-box
+          %form
+            %input{placeholder:"type a message",type:"text", class: "input-box__text"}
+            %label.input-box__upload-label{for: "message_image"}
+              %i.fa.fa-picture-o
+              / = f.file_field :image, id: "upload-icon"
+              %input{type:"file", class:"image_submit", id:"message_image"}
+        %input{type: "submit", value: "Send", class: "submit-btn"}
+
+
+
