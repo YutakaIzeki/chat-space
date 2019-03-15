@@ -1,0 +1,35 @@
+
+.main{
+  width: calc(100vw - 300px);
+  float: left;
+  &-header{
+    display: flex;
+    padding: 0px 40px;
+    height: 100px;
+    border-bottom: solid 1px #eee;
+    box-sizing: border-box;
+    &__left-box{
+      margin-top: 35px;
+      &__current-group{
+        font-size: 20px;
+        color: #333;
+        padding-bottom: 15px;
+      }
+      &__member-list{
+        font-size: 12px;
+        color: #999;
+      }
+    }
+    &__edit-btn{
+      height: 40px;
+      line-height: 40px;
+      margin-top: 28px;
+      padding: 0 20px;
+      position: absolute;
+      right: 40px;
+      border: solid 1px;
+      box-sizing: border-box;
+      color: #38aef0;
+    }
+  }
+}
