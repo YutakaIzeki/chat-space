@@ -3,5 +3,20 @@
 
 @import "./reset";
 
+// トップ部分
+@import "./modules/create-group-message";
+
+// サイド部分
 @import "./modules/chat-side";
 
+// メイン部分
+@import "./modules/main-header";
+@import "./modules/message";
+@import "./modules/form";
+
+.wrapper{
+  // margin: 0;
+  // padding: 0;
+  // width: 100%;
+  display: flex;
+  }
