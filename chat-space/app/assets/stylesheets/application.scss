@@ -1,7 +1,7 @@
 
 @import "font-awesome";
 
-@import "./reset";
+@import "./config/reset";
 
 // トップ部分
 @import "./modules/create-group-message";
@@ -13,6 +13,7 @@
 @import "./modules/main-header";
 @import "./modules/message";
 @import "./modules/form";
+@import "./modules/user";
 
 .wrapper{
   // margin: 0;

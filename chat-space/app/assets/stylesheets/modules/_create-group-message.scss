@@ -1,7 +1,12 @@
 
 
-.create-group-message{
-  background-color: #38aef0;
-  color: #ffffff;
+.flash {
+  color: white;
   text-align: center;
-}
+  &__alert{
+    background-color: red;
+  }
+  &__notice {
+    background-color: blue;
+  }
+ }
