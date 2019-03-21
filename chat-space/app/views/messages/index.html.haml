@@ -25,9 +25,9 @@
         .new-message
           .input-box
             = f.text_field :content, class: 'input-box__text', placeholder: 'type a message'
-            %label.input-box__upload-label{for: "message_image"}
+            = f.label :image, class: 'input-box__upload-label' do
               = fa_icon 'picture-o', class: 'icon'
-              %input{type:"file", class:"image_submit", id:"message_image"}
+              = f.file_field :image, class: 'image_submit'
           = f.submit 'Send', class: 'submit-btn'
 
 
