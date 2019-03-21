@@ -1,6 +1,6 @@
 class Message < ApplicationRecord
 
-  validates :text, :file, presence: true
+  # validates :content, presence: true
 
   belongs_to :user
   belongs_to :group
