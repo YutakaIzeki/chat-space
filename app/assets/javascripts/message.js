@@ -40,6 +40,7 @@ $(function(){
     })
     .fail(function(){
       alert('error');
+      $('.submit-btn').prop('disabled', false);
     })
   })
 })
