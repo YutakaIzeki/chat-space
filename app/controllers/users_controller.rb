@@ -4,6 +4,7 @@ class UsersController < ApplicationController
     @users = User.where('name LIKE(?)', "%#{params[:key]}%")
     respond_to do |format|
       format.json
+    end
   end
 
 
