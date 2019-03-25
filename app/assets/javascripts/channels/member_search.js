@@ -1,4 +1,7 @@
 $(function(){
+
+  var search_list = $('#user-search-result');
+
   function buildHTML(user){
 
     var html = `<div class="chat-group-user clearfix">
@@ -19,10 +22,14 @@ $(function(){
     })
     .done(function(users){
       $('#user-search-result').empty();
-      users.forEach((user) => {
-        var html =buildHTML(user);
-        $('#user-search-result').append(html)
-      });
+      if(users.length !== 0) {
+        users.forEach((user) => {
+          var html =buildHTML(user);
+          search_list.append(html)
+        });
+      }else{
+        search_list.append(html)
+      }
     })
     .fail(function(){
       alert('error');
