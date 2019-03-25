@@ -20,7 +20,6 @@ $(function(){
     .done(function(users){
       $('#user-search-result').empty();
       users.forEach((user) => {
-        console.log(user);
         var html =buildHTML(user);
         $('#user-search-result').append(html)
       });
