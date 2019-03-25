@@ -20,7 +20,7 @@
       = render partial: "message", collection: @messages
 
     .form
-      = form_for [@group, @message] do |f|
+      = form_for [@group, @message], html: { id: 'new_message' } do |f|
         .new-message
           .input-box
             = f.text_field :content, class: 'input-box__text', placeholder: 'type a message'
