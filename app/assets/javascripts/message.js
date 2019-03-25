@@ -24,7 +24,6 @@ $(function(){
     e.preventDefault();
     var formData = new FormData(this);
     var url = $(this).attr('action')
-    console.log(this)
     $.ajax({
       url: url,
       type: "POST",
@@ -38,6 +37,7 @@ $(function(){
       $('.messages').append(html)
       $('.input-box__text').val("")
       $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
+      $('.submit-btn').prop('disabled', false);
     })
     .fail(function(){
       alert('error');
