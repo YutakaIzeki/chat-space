@@ -64,5 +64,11 @@ $(function(){
       alert('ユーザー検索に失敗しました');
     })
   })
+
+  $('.chat-group-user__btn--remove').on('click',function(){
+    $(this).parent().remove()
+  })
+
+
 });
 
