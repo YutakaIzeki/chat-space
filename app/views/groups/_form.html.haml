@@ -28,6 +28,10 @@
       / = f.collection_check_boxes :user_ids, User.all, :id, :name
       / この部分はインクリメンタルサーチ（ユーザー追加の非同期化のときに使用します
       #chat-group-users
+        #chat-group-user-8.chat-group-user.clearfix.js-chat-member
+          %input{:name => "group[user_ids][]", :type => "hidden", :value => "#{current_user.id}"}/
+          %p.chat-group-user__name
+            = current_user.name
 
   .chat-group-form__field.clearfix
     .chat-group-form__field--left
