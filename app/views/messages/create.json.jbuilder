@@ -4,3 +4,5 @@ json.content_present    @message.content.present?
 json.content            @message.content
 json.image_present      @message.image.present?
 json.image              @message.image.url
+json.id                 @message.id
+json.group_id           @message.group_id
