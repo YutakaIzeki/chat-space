@@ -5,13 +5,10 @@ class MessagesController < ApplicationController
   def index
     @message = Message.new
     @messages = @group.messages.includes(:user)
-    latest_message_info = params[:message].split(" ") unless params[:message].nil?
+    latest_message_info = params[:message] unless params[:message].nil?
     respond_to do |format|
       format.html
-      format.json{
-        @new_messages = Message.where('id > ?', latest_message_info[0]).where(group_id: latest_message_info[1])
-        # binding.pry
-      }
+      format.json{ @new_messages = @messages.where('id > ?', latest_message_info) }
     end
   end
 
