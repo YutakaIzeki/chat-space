@@ -23,10 +23,11 @@ class MessagesController < ApplicationController
        format.json
       end
     else
-      binding.pry
-      @messages = @group.messages.includes(:user)
-      flash.now[:alert] = 'メッセージを入力してください。'
-      render :index
+      respond_to do |format|
+          @messages = @group.messages.includes(:user)
+          flash.now[:alert] = 'メッセージを入力してください。'
+          render :index
+      end
     end
   end
 
