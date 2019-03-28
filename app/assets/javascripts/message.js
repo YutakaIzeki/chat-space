@@ -52,7 +52,7 @@ $(function(){
     $.ajax({
       url: location.href,
       type: 'GET',
-      data: { message: message },
+      data: { id: message },
       dataType: 'json'
     })
     .always(function(data){
