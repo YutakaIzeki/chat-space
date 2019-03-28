@@ -7,7 +7,7 @@ $(function(){
                       ${message.user_name}
                     </p>
                     <p class="message__upper-info__date">
-                      ${message.time}
+                      ${message.created_at}
                     </p>
                   </div>
                   <div class="message__lower">
@@ -48,7 +48,7 @@ $(function(){
     setInterval(update,5000);
   })
   function update(){
-    var message = $('.messages .message:last-child').attr('id')
+    var message = $('.message:last-child').attr('id')
     // console.log(message)
     $.ajax({
       url: location.href,
