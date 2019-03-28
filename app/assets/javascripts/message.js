@@ -49,7 +49,6 @@ $(function(){
   })
   function update(){
     var message = $('.message:last-child').attr('id')
-    // console.log(message)
     $.ajax({
       url: location.href,
       type: 'GET',
@@ -57,12 +56,9 @@ $(function(){
       dataType: 'json'
     })
     .always(function(data){
-      console.log(data)
       if($.isEmptyObject(data)){
-        // console.log("hello")
       }else{
         data.forEach(function(element){
-          // console.log(element)
           var html = buildHTML(element)
           $('.messages').append(html)
         })
