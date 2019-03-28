@@ -1,7 +1,7 @@
 $(function(){
   function buildHTML(message){
     let image = message.image_present ? message.image : "" ;
-    var html = `<div class="message" id="${message.id} ${message.group_id}">
+    var html = `<div class="message" id="${message.id}">
                   <div class="message__upper-info">
                     <p class="message__upper-info__talker">
                       ${message.user_name}
