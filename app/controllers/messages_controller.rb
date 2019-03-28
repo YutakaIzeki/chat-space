@@ -5,6 +5,11 @@ class MessagesController < ApplicationController
   def index
     @message = Message.new
     @messages = @group.messages.includes(:user)
+    latest_message_info = params[:id] unless params[:id].nil?
+    respond_to do |format|
+      format.html
+      format.json{ @new_messages = @messages.where('id > ?', latest_message_info) }
+    end
   end
 
   def create
@@ -15,9 +20,11 @@ class MessagesController < ApplicationController
        format.json
       end
     else
-      @messages = @group.messages.includes(:user)
-      flash.now[:alert] = 'メッセージを入力してください。'
-      render :index
+      respond_to do |format|
+          @messages = @group.messages.includes(:user)
+          flash.now[:alert] = 'メッセージを入力してください。'
+          render :index
+      end
     end
   end
 
